@@ -1,5 +1,5 @@
 //1. 액션
-const SE_INIT = 'SE_INIT';
+const SE_INIT = "SE_INIT";
 //2. 액션 함수
 export const seInit = (response) => {
   return { type: SE_INIT, response };
@@ -8,11 +8,11 @@ export const seInit = (response) => {
 
 //3. 초기값
 
-const seInitValue = [{ type: '', subtype: '', name: '', iataCode: '' }];
+const seInitValue = [{ type: "", subtype: "", name: "", iataCode: "" }];
 
 //4. 리듀스 함수
 export default function searchReducer2(state = seInitValue, action) {
-  console.log('redux함수 action값은', action);
+  console.log("redux2 함수 action값은", action);
   switch (action.type) {
     case SE_INIT:
       return action.response;

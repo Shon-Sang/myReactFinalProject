@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import Grid from '@mui/material/Grid';
-import CircularProgress from '@mui/material/CircularProgress';
-import SearchResultConfig from '../../components/searchresultcomponent/SearchResultConfig';
-import SearchResultHeader from '../../components/searchresultcomponent/SearchResultHeader';
-import SearchResultItem from '../../components/searchresultcomponent/SearchResultItem';
-import Header from '../../components/othercomponent/Header';
-import './searchResultPage.css';
-import Layout from './../../components/othercomponent/Layout';
-import { useSelector } from 'react-redux';
-import SearchResultItem02 from './../../components/searchresultcomponent/SearchResultItem02';
-import SearchResultItem02Back from '../../components/searchresultcomponent/SearchResultItem02Back';
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import Grid from "@mui/material/Grid";
+import CircularProgress from "@mui/material/CircularProgress";
+import SearchResultConfig from "../../components/searchresultcomponent/SearchResultConfig";
+import SearchResultHeader from "../../components/searchresultcomponent/SearchResultHeader";
+import SearchResultItem from "../../components/searchresultcomponent/SearchResultItem";
+import Header from "../../components/othercomponent/Header";
+import "./searchResultPage.css";
+import Layout from "./../../components/othercomponent/Layout";
+import { useSelector } from "react-redux";
+import SearchResultItem02 from "./../../components/searchresultcomponent/SearchResultItem02";
+import SearchResultItem02Back from "../../components/searchresultcomponent/SearchResultItem02Back";
 
 const SearchResultPage = () => {
   // const location = useLocation();
@@ -34,14 +34,15 @@ const SearchResultPage = () => {
     let dateVal = new Date(str);
     return dateVal.getTime();
   };
-  console.log('페이지 컴포넌트', number);
+  console.log("페이지 컴포넌트", number);
   const sortArr = searchReduxData.flightOfferSearch;
+  console.log("검색 페이지에 들어왔습니다.....");
 
   return (
     <>
       <Header />
-      <div className='bodyContainer'>
-        <div className='smallMargin'>
+      <div className="bodyContainer">
+        <div className="smallMargin">
           <SearchResultHeader />
           {/* <SearchResultHeader info={info} /> */}
         </div>
